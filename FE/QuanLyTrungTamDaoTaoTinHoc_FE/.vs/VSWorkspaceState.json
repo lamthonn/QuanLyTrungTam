@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\public",
+    "\\src",
+    "\\src\\assets",
+    "\\src\\layout",
+    "\\src\\pages",
+    "\\src\\router"
+  ],
+  "SelectedNode": "\\src\\pages\\Notification.vue",
+  "PreviewInSolutionExplorer": false
+}
