@@ -9,4 +9,10 @@
         public string? userId { get; set; }
         public string? khoahocId { get; set; }
     }
+
+    public class PaymentRc
+    {
+        public string? khoaHocId { get; set; }
+        public string? khoaHoc { get; set; }
+    }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using TrungTamTinHoc_BE.Data;
 using TrungTamTinHoc_BE.Data.KhoaHoc_VM;
 using TrungTamTinHoc_BE.Services.GiangVien;
 using TrungTamTinHoc_BE.Services.KhoaHocServices;
@@ -79,6 +80,20 @@ namespace TrungTamTinHoc_BE.Controllers
             catch
             {
                 return BadRequest();
+            }
+        }
+
+        [HttpGet("Check-payment")]
+        public async Task<List<PaymentRc>> CheckPayment([FromQuery] string username)
+        {
+            try
+            {
+                var Data = _khoaHocRepository.CheckPayment(username);
+                return Data;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
             }
         }
     }

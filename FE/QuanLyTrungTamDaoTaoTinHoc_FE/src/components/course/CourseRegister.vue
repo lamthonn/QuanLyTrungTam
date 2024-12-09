@@ -80,7 +80,6 @@ export default {
           elements.value = stripe.value.elements();
           card.value = elements.value.create("card");
           card.value.mount("#card-element");
-          console.log("Stripe đã sẵn sàng");
         } catch (error) {
           console.error("Lỗi khi khởi tạo Stripe:", error);
         }

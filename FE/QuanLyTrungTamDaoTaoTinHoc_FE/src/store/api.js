@@ -6,6 +6,7 @@ const localPath = "https://localhost:7255";
 
     //thanh toán
     CREATE_CHECKOUT_SESION:`${localPath}/api/Payment/create-checkout-session`,
+    CHECK_PAYMENT:`${localPath}/api/KhoaHoc/Check-payment`
 }
 
 export default apiUrl;

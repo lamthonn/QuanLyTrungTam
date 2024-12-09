@@ -121,5 +121,16 @@ namespace TrungTamTinHoc_BE.Services.KhoaHocServices
             else { _context.SaveChanges(); }
             
         }
+
+        public List<PaymentRc> CheckPayment(string username)
+        {
+            var data = _context.paymentRecords.Where(x => x.UserId == username)
+                .Select(x => new PaymentRc
+                {
+                    khoaHocId = x.KhoaHocId,
+                    khoaHoc = _context.KhoaHocs.FirstOrDefault(y => y.maKH == x.KhoaHocId)!.tenKH,
+                }).ToList();
+            return data;
+        }
     }
 }
